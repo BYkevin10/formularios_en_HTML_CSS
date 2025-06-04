@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario Completo HTML</title>
+  <link rel="stylesheet" href="./Formulario/_CSS/styles.CSS" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>📝 Formulario Completo HTML</h1>
+
+    <form id="miFormulario">
+      <!-- Sección 1: Datos Básicos -->
+      <fieldset>
+        <legend>📋 Información Personal</legend>
+
+        <!-- Texto simple -->
+        <div class="form-group">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez" />
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" />
+        </div>
+
+        <!-- Teléfono -->
+        <div class="form-group">
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" pattern="^3[0-9]{9}$" placeholder="Ej: 3001234567" />
+        </div>
+
+        <!-- Contraseña -->
+        <div class="form-group">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" required minlength="8"
+            placeholder="Mínimo 8 caracteres" />
+        </div>
+      </fieldset>
+
+      <!-- Sección 2: Fechas y Tiempos -->
+      <fieldset>
+        <legend>📅 Fechas y Tiempos</legend>
+
+        <!-- Fecha -->
+        <div class="form-group">
+          <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+          <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" />
+        </div>
+
+        <!-- Hora -->
+        <div class="form-group">
+          <label for="hora_entrada">Hora de entrada preferida:</label>
+          <input type="time" id="hora_entrada" name="hora_entrada" />
+        </div>
+
+        <!-- Fecha y hora local -->
+        <div class="form-group">
+          <label for="fecha_hora_local">Fecha y hora de reunión:</label>
+          <input type="datetime-local" id="fecha_hora_local" name="fecha_hora_local" />
+        </div>
+
+        <!-- Mes -->
+        <div class="form-group">
+          <label for="mes_preferido">Mes favorito:</label>
+          <input type="month" id="mes_preferido" name="mes_preferido" />
+        </div>
+
+        <!-- Semana -->
+        <div class="form-group">
+          <label for="semana_reserva">Semana de reserva:</label>
+          <input type="week" id="semana_reserva" name="semana_reserva" />
+        </div>
+      </fieldset>
+
+      <!-- Sección 3: Opciones y Selecciones -->
+      <fieldset>
+        <legend>🔘 Opciones y Selecciones</legend>
+
+        <!-- Checkbox -->
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="notificaciones" name="notificaciones" checked />
+            Deseo recibir notificaciones por correo
+          </label>
+        </div>
+
+        <!-- Radio buttons -->
+        <div class="form-group">
+          <label>Género:</label>
+          <label><input type="radio" name="genero" value="masculino" /> Masculino</label>
+          <label><input type="radio" name="genero" value="femenino" /> Femenino</label>
+          <label><input type="radio" name="genero" value="otro" /> Otro</label>
+        </div>
+
+        <!-- Select -->
+        <div class="form-group">
+          <label for="pais">País:</label>
+          <select id="pais" name="pais">
+            <option value="">Seleccione un país</option>
+            <option value="pe">Perú</option>
+            <option value="mx">México</option>
+            <option value="co">Colombia</option>
+            <option value="ar">Argentina</option>
+          </select>
+        </div>
+
+        <!-- Color -->
+        <div class="form-group">
+          <label for="color_favorito">Color favorito:</label>
+          <input type="color" id="color_favorito" name="color_favorito" value="#ff0000" />
+        </div>
+
+        <!-- Rango -->
+        <div class="form-group">
+          <label for="nivelSatisfaccion">Nivel de Satisfacción (1-10)</label>
+          <input type="range" id="nivelSatisfaccion" name="nivelSatisfaccion" min="1" max="10" />
+        </div>
+      </fieldset>
+
+      <!-- Sección 4: Archivos y Búsqueda -->
+      <fieldset>
+        <legend>📁 Archivos y Búsqueda</legend>
+
+        <!-- Subir archivo -->
+        <div class="form-group">
+          <label for="foto_perfil">Foto de perfil:</label>
+          <input type="file" id="foto_perfil" name="foto_perfil" accept="image/*" />
+        </div>
+
+        <!-- Búsqueda -->
+        <div class="form-group">
+          <label for="busqueda">Buscar en nuestro sitio:</label>
+          <input type="search" id="busqueda" name="busqueda" placeholder="Escribe tu búsqueda..." />
+        </div>
+
+        <!-- URL -->
+        <div class="form-group">
+          <label for="sitio_web">Sitio web personal:</label>
+          <input type="url" id="sitio_web" name="sitio_web" placeholder="https://ejemplo.com" />
+        </div>
+      </fieldset>
+
+      <!-- Sección 5: Botones -->
+      <fieldset>
+        <legend>🛎️ Acciones</legend>
+
+        <!-- Botón normal -->
+        <div class="form-group">
+          <input type="button" id="boton_prueba" value="Botón de prueba" onclick="alert('Botón clickeado!')" />
+        </div>
+
+        <!-- Imagen como botón -->
+        <div class="form-group">
+          <label>Enviar con imagen:</label>
+          <input type="image" src="./Formulario/_IMG/icon.png" alt="Enviar" />
+        </div>
+
+        <!-- Terminos y condiciones -->
+        <div class="form-group terminos">
+          <input type="checkbox" id="acepto" name="acepto" required />
+          <label for="acepto">
+            Acepto los <a href="#" id="ver-terminos">términos y condiciones</a>
+          </label>
+          <div id="terminos-error" class="error-message" style="display: none;">
+            Debes aceptar los términos y condiciones para continuar
+          </div>
+        </div>
+
+        <!-- Botones de envío y reset -->
+        <div class="form-group button-group">
+          <button type="submit" class="btn-enviar">🚀 Enviar Formulario</button>
+          <button type="reset" class="btn-limpiar">🗑️ Limpiar Formulario</button>
+        </div>
+      </fieldset>
+
+      <!-- Campo oculto -->
+      <input type="hidden" id="id_sesion" name="id_sesion" value="abc123xyz" />
+    </form>
+
+    <!-- ÁREA DE RESULTADOS -->
+    <div id="resultado" class="resultado">
+      <h3>✅ ¡Formulario enviado exitosamente!</h3>
+      <p>Estos son los datos que enviaste:</p>
+      <div id="datosEnviados"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

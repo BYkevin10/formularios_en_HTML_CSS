@@ -1,0 +1,200 @@
+/* Estilos base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Estilos para fieldset y legend */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* Estilos para grupos de formulario */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Estilos para inputs */
+input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]),
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Estilos para checkbox y radio */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Estilo base para ambos botones */
+.btn-enviar, .btn-limpiar {
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Estilo específico para enviar */
+.btn-enviar {
+  background-color: #3498db;
+  color: white;
+  border: none;
+}
+
+.btn-enviar:hover {
+  background-color: #2980b9;
+}
+
+/* Estilo específico para limpiar */
+.btn-limpiar {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border: 2px solid #dee2e6;
+}
+
+.btn-limpiar:hover {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+}
+
+/* Estilos para el input de rango */
+input[type="range"] {
+    -webkit-appearance: none;  /* También define la propiedad estándar 'appearance' para compatibilidad */
+    appearance: none;         /* Propiedad estándar */
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+}
+
+/* Estilo para el control deslizante (thumb) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Estilo para Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Estilo para el track en Firefox */
+input[type="range"]::-moz-range-track {
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+}
+
+/* Estilos para el área de resultados */
+.resultado {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e8f4fc;
+  border-radius: 4px;
+  border-left: 4px solid #3498db;
+  display: none;
+}
+
+.resultado h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.dato {
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.etiqueta {
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* Estilos para términos y condiciones */
+.terminos {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.terminos label {
+  display: inline;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+#ver-terminos {
+  color: #3498db;
+  text-decoration: none;
+}
+
+#ver-terminos:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
